@@ -18,16 +18,20 @@ def db_query(query, db_name, user):
         conn = psycopg2.connect(dbname=db_name, user=user)
     except psycopg2.Error as e:
         print(e)
-        conn.close()
         raise SystemExit
 
     # Create cursor and try to execute given query
+    # and return fetched data
     cur = conn.cursor()
     try:
         cur.execute(query)
     except psycopg2.Error as e:
         print(e)
         conn.close()
+    else:
+        return cur.fetchall()
+        cur.close()
+        conn.close()
 
 
-#db_query('select * from authors;', 'news', 'vagrant')
+#print(db_query('select * from authors;', 'news', 'vagrant'))
