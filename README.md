@@ -90,5 +90,5 @@ WHERE
 To run, simply execute the log_analysis.py file from the command line on the machine where the database is currently running.
 
 ```sh
-$ python3 log_analysis.py
+$ ./log_analysis.py
 ```
