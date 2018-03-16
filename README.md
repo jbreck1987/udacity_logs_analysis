@@ -84,7 +84,7 @@ WHERE
 ### Usage
 
 * This tool requires the PostgreSQL psycopg2 Python library to run.
-* The sample SQL database used for the assignement must also be available and running on the same machine where the tool wil be run (local connection only).
+* The sample SQL database used for the assignment must also be available and running on the same machine where the tool will be run (local connection only).
 * The SQL views given above must also be created within the sample SQL database for the queries to run successfully.
 
 To run, simply execute the log_analysis.py file from the command line on the machine where the database is currently running.
