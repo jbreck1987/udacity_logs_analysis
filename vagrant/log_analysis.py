@@ -38,7 +38,7 @@ def db_query(query, db_name, user):
 q1 = db_query('select * from view_select_popular_articles',
               'news', 'vagrant')
 
-print('Most popular articles of all time:\n')
+print('\nMost popular articles of all time:\n')
 for entry in q1:
     print('{} - {} views'.format(entry[0], entry[1]))
 
@@ -56,6 +56,6 @@ for entry in q2:
 q3 = db_query('select * from view_select_error_percent',
               'news', 'vagrant')
 
-print('\nDays with error count over 1%\n')
+print('\nDays with error count over 1%:\n')
 for entry in q3:
     print('{} - {}%'.format(entry[0], entry[1]))
